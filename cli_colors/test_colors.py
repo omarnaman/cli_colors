@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 if __name__=="__main__":
-    from colors import *
+    from .colors import *
     color_print("BOLD ITALIC\n", WHITE, MOD_BOLD, MOD_ITALIC)
     color_print("CROSS_OUT\n", WHITE, MOD_CROSS_OUT)
     color_print("BLINK\n", WHITE, MOD_SLOW_BLINK)
