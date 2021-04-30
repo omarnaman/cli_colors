@@ -5,7 +5,7 @@ This is mainly taken from this [Stack Overflow answer](https://stackoverflow.com
 
 
 # Installation
-cli\_colors is a apckgae and can be installed using pip
+cli\_colors is a package and can be installed using pip
 
 ```bash
 pip3 install .
@@ -15,9 +15,9 @@ python3 -m pip install .
 ```
 
 # Usage
-The library provides a single function `color_print` and a handful of named colors and modifiers.
+The library provides two functions `color_print` and `color_str` and a handful of named colors and modifiers.
 
-To use `color_print`, pass the text to be printed, the color of the text, and a list of modifiers.
+To use cli_color, pass the text to be printed, the color of the text, and a list of modifiers to either of the functions, the only difference is that `color_print` prints the modified text, while `color_str` returns it.
 
 ## Examples
 
