@@ -4,6 +4,16 @@ A light-weight library for accessible terminal colors.
 This is mainly taken from this [Stack Overflow answer](https://stackoverflow.com/a/33206814)
 
 
+# Installation
+cli\_colors is a apckgae and can be installed using pip
+
+```bash
+pip3 install .
+```
+```bash
+python3 -m pip install .
+```
+
 # Usage
 The library provides a single function `color_print` and a handful of named colors and modifiers.
 
