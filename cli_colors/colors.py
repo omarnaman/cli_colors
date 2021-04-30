@@ -51,23 +51,35 @@ RESET = '\033[0m'
 
 
 # Modifiers
-BOLD = "1"
-FAINT = "2"
-ITALIC = "3"
-UNDERLINE = "4"
-SLOW_BLINK = "5"
-RAPID_BLINK = "6"
-CROSS_OUT = "9"
+MOD_BOLD = "1"
+MOD_FAINT = "2"
+MOD_ITALIC = "3"
+MOD_UNDERLINE = "4"
+MOD_SLOW_BLINK = "5"
+MOD_RAPID_BLINK = "6"
+MOD_CROSS_OUT = "9"
 
 
 
 
 def color_print(text, color, *modifiers):
+    """
+    Prints `text` with the color `color` and a list of modifiers 
+    `color` can be either a 4-bit, 8-bit or RGB color
+    
+    4-bit colors can be directly accessed from the library alongside a selection of 8-bit colors.
+    Custom 8 bit colors can be passed to the function as a string `MOD_8BIT + "<8bit-color code>"`.
+    If color is passed as a tuple with THREE items, it is interpreted as RGB; otherwise it is handled as an escaped color sequence.
+
+    A list of modifiers can be passed to the function further modify the appearance of the text.
+    NOTE: This function does not add new lines to the printed text.
+
+    """
     if type(color) is str:
         if len(modifiers) > 0:
             color += ";"
         print(f"{color}{';'.join(modifiers)}m{text}{RESET}", end="")
-        
+
     elif type(color) is tuple:
         if len(color) != 3:
             raise "RGB color sent does not have 3 values"
@@ -76,4 +88,4 @@ def color_print(text, color, *modifiers):
         color = f"{';'.join(color)}"
         if len(modifiers) > 0:
             color += ";"
-        print(f"\033[{color}{';'.join(modifiers)}m{text}{RESET}")
+        print(f"\033[{color}{';'.join(modifiers)}m{text}{RESET}", end="")
