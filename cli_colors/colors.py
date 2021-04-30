@@ -75,10 +75,23 @@ def color_print(text, color, *modifiers):
     NOTE: This function does not add new lines to the printed text.
 
     """
+    print(color_str(text, color, *modifiers))
+
+def color_str(text, color, *modifiers):
+    """
+    Returns `text` with the color `color` and a list of modifiers 
+    `color` can be either a 4-bit, 8-bit or RGB color
+    
+    4-bit colors can be directly accessed from the library alongside a selection of 8-bit colors.
+    Custom 8 bit colors can be passed to the function as a string `MOD_8BIT + "<8bit-color code>"`.
+    If color is passed as a tuple with THREE items, it is interpreted as RGB; otherwise it is handled as an escaped color sequence.
+
+    A list of modifiers can be passed to the function further modify the appearance of the text.
+    """
     if type(color) is str:
         if len(modifiers) > 0:
             color += ";"
-        print(f"{color}{';'.join(modifiers)}m{text}{RESET}", end="")
+        return f"{color}{';'.join(modifiers)}m{text}{RESET}"
 
     elif type(color) is tuple:
         if len(color) != 3:
@@ -88,4 +101,6 @@ def color_print(text, color, *modifiers):
         color = f"{';'.join(color)}"
         if len(modifiers) > 0:
             color += ";"
-        print(f"\033[{color}{';'.join(modifiers)}m{text}{RESET}", end="")
+        return f"\033[{color}{';'.join(modifiers)}m{text}{RESET}"
+    return None
+    
