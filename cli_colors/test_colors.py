@@ -2,11 +2,11 @@
 
 if __name__=="__main__":
     from colors import *
-    color_print("BOLD ITALIC\n", WHITE, BOLD, ITALIC)
-    color_print("CROSS_OUT\n", WHITE, CROSS_OUT)
-    color_print("BLINK\n", WHITE, SLOW_BLINK)
-    color_print("UNDERLINE\n", WHITE, UNDERLINE)
-    color_print("FAINT\n", WHITE, FAINT)
+    color_print("BOLD ITALIC\n", WHITE, MOD_BOLD, MOD_ITALIC)
+    color_print("CROSS_OUT\n", WHITE, MOD_CROSS_OUT)
+    color_print("BLINK\n", WHITE, MOD_SLOW_BLINK)
+    color_print("UNDERLINE\n", WHITE, MOD_UNDERLINE)
+    color_print("FAINT\n", WHITE, MOD_FAINT)
     color_print("PINK \n", PINK)
     color_print("YELLOW1\n", YELLOW_SHADE1)
     color_print("YELLOW2\n", YELLOW_SHADE2)
