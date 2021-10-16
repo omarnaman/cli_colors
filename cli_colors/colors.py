@@ -103,4 +103,16 @@ def color_str(text, color, *modifiers):
             color += ";"
         return f"\033[{color}{';'.join(modifiers)}m{text}{RESET}"
     return None
+
+def color_generator(colors: 'list[str]'):
+    """
+    Returns a generator looping through the list `colors` infinitly. The list can be a list of lists, each containing a list of modifiers or "Themes"
+    """
+    if colors is None or len(colors) == 0:
+        raise Exception("The colors list cannot be empty or None")
+    index = 0
+    mod = len(colors)
+    while True:
+        yield colors[index]
+        index = (index + 1) % mod
     
