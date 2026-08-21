@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/project/cli_colors/
+      url: https://pypi.org/project/ansi-cli-colors/
     permissions:
       id-token: write
     steps:

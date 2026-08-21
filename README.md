@@ -8,7 +8,7 @@ This is mainly taken from this [Stack Overflow answer](https://stackoverflow.com
 cli\_colors is available on PyPI and can be installed using pip
 
 ```bash
-pip install cli_colors
+pip install ansi-cli-colors
 ```
 
 For a local/dev install from a clone of this repo:
