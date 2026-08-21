@@ -7,7 +7,7 @@ name = "cli_colors"
 dynamic = ["version"]
 description = "A light library for coloring terminal output"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 requires-python = ">=3.6"
 authors = [
     {name = "Omar Naman", email = "omar.97.fadel@gmail.com"}
@@ -15,7 +15,6 @@ authors = [
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
