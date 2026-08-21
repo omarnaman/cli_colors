@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cli_colors"
+dynamic = ["version"]
+description = "A light library for coloring terminal output"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.6"
+authors = [
+    {name = "Omar Naman", email = "omar.97.fadel@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Terminal",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/omarnaman/cli_colors"
+Repository = "https://github.com/omarnaman/cli_colors"
+"Bug Tracker" = "https://github.com/omarnaman/cli_colors/issues"
+
+[tool.setuptools]
+packages = ["cli_colors"]
+
+[tool.setuptools.dynamic]
+version = {attr = "cli_colors.__version__"}

@@ -5,7 +5,13 @@ This is mainly taken from this [Stack Overflow answer](https://stackoverflow.com
 
 
 # Installation
-cli\_colors is a package and can be installed using pip
+cli\_colors is available on PyPI and can be installed using pip
+
+```bash
+pip install cli_colors
+```
+
+For a local/dev install from a clone of this repo:
 
 ```bash
 pip3 install .
@@ -36,7 +42,7 @@ color_print("RGB Text\n", (255, 255, 100))
 # Pass a custom 8-bit color
 color_print("Custom 8-bit Text\n", MOD_8BIT + "52", MOD_ITALIC)
 ```
-![](examples.png)
+![](https://raw.githubusercontent.com/omarnaman/cli_colors/master/examples.png)
 
 ```python
 # Color Generator
@@ -49,7 +55,7 @@ theme_gen = color_generator([[BLUE_SHADE1, MOD_UNDERLINE], [RED_SHADE2, MOD_ITAL
 for i in range(5):
     color_print(f"Line {i}", *next(theme_gen))
 ```
-![](color_gen.png)  
-![](theme_gen.png)
+![](https://raw.githubusercontent.com/omarnaman/cli_colors/master/color_gen.png)  
+![](https://raw.githubusercontent.com/omarnaman/cli_colors/master/theme_gen.png)
 
 
